@@ -1,0 +1,29 @@
+.ul-linha{
+    background-color: #fff;
+    margin-top: 10px;
+    position: fixed;
+    z-index: 9999;
+    border-radius: 25px;
+}
+.li-linha{
+    padding: 20px
+}
+.li-linha:hover{
+background-color: #cacaca;
+cursor: pointer;
+}
+.grid-horario{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px
+}
+@media (max-width:600px) {
+    input{
+        width: 300px !important;
+    }
+    .grid-horario{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}

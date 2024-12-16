@@ -154,7 +154,7 @@ export default function App() {
           {/* Horários de Sábado */}
           {resultado.horarioSabado && resultado.horarioSabado.map((item, index) => (
             <div key={index}>
-              <h3 className="mb-4">Ponto: {item.ponto} - Sábado</h3>
+              <h3 className="my-5">Ponto: {item.ponto} - Sábado</h3>
               <div
                 style={{
                   display: 'grid',
@@ -188,7 +188,7 @@ export default function App() {
           {/* Horários de Domingo */}
           {resultado.horarioDomingo && resultado.horarioDomingo.map((item, index) => (
             <div key={index}>
-              <h3 className="mb-4">Ponto: {item.ponto} - Domingo</h3>
+              <h3 className="my-5">Ponto: {item.ponto} - Domingo</h3>
               <div
                 style={{
                   display: 'grid',

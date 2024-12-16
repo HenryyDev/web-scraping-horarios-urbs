@@ -26,7 +26,7 @@ export default function App() {
   };
 
   const busca = () => {
-    axios.get(`http://web-scraping-horarios-urbs-production.up.railway.app/${linha}`)
+    axios.get(`https://web-scraping-horarios-urbs-production.up.railway.app/${linha}`)
       .then((response) => {
         console.log("Resposta da API:", response.data);  // Verifique a resposta para depuração
   

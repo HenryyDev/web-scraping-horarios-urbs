@@ -32,10 +32,10 @@ export default function App() {
       autoClose: false,
       closeOnClick: false,
     });
-
+    // https://web-scraping-horarios-urbs-production.up.railway.app
     axios
       .get(
-        `https://web-scraping-horarios-urbs-production.up.railway.app/${linha}`
+        `http://localhost:3000/${linha}`
       )
       .then((response) => {
         toast.dismiss(toastId);
@@ -147,21 +147,22 @@ export default function App() {
                   {item.horarios.map((coluna, colIndex) => (
                     <div key={colIndex}>
                       <div className="card">
-                        <div className="card-body">
-                          <ul className="list-group">
+                        <div className="card-body card-horario">
+                          <ul className="list-group ">
                             {coluna.length === 0 || coluna === null ? (
-                              <li className="list-group-item text-center text-muted">
+                              <li className="li-horario list-group-item text-center text-muted">
                                 Sem horários disponíveis
                               </li>
                             ) : (
                               coluna.map((horario, idx) => (
                                 <li
                                   key={idx}
-                                  className="list-group-item"
-                                  style={{ background: "#cacaca" }}
+                                  className="li-horario list-group-item"
+                                  
                                 >
                                   {horario}
                                 </li>
+                                
                               ))
                             )}
                           </ul>
@@ -182,15 +183,15 @@ export default function App() {
                     {item.horarios.map((coluna, colIndex) => (
                       <div key={colIndex}>
                         <div className="card">
-                          <div className="card-body">
-                            <ul className="list-group">
+                          <div className="card-body card-horario">
+                            <ul className="list-group ">
                               {coluna.length === 0 || coluna === null ? (
-                                <li className="list-group-item text-center text-muted">
+                                <li className="li-horario list-group-item text-center text-muted">
                                   Sem horários disponíveis
                                 </li>
                               ) : (
                                 coluna.map((horario, idx) => (
-                                  <li key={idx} className="list-group-item">
+                                  <li key={idx} className="li-horario list-group-item">
                                     {horario}
                                   </li>
                                 ))
@@ -213,15 +214,15 @@ export default function App() {
                     {item.horarios.map((coluna, colIndex) => (
                       <div key={colIndex}>
                         <div className="card">
-                          <div className="card-body">
-                            <ul className="list-group">
+                          <div className="card-body card-horario">
+                            <ul className="list-group ">
                               {coluna.length === 0 || coluna === null ? (
-                                <li className="list-group-item text-center text-muted">
+                                <li className="li-horario list-group-item text-center text-muted">
                                   Sem horários disponíveis
                                 </li>
                               ) : (
                                 coluna.map((horario, idx) => (
-                                  <li key={idx} className="list-group-item">
+                                  <li key={idx} className="li-horario list-group-item">
                                     {horario}
                                   </li>
                                 ))

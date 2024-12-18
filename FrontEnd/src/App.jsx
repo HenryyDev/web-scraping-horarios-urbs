@@ -32,10 +32,10 @@ export default function App() {
       autoClose: false,
       closeOnClick: false,
     });
-    // https://web-scraping-horarios-urbs-production.up.railway.app
+
     axios
       .get(
-        `http://localhost:3000/${linha}`
+        `https://web-scraping-horarios-urbs-production.up.railway.app/${linha}`
       )
       .then((response) => {
         toast.dismiss(toastId);
@@ -158,11 +158,9 @@ export default function App() {
                                 <li
                                   key={idx}
                                   className="li-horario list-group-item"
-                                  
                                 >
                                   {horario}
                                 </li>
-                                
                               ))
                             )}
                           </ul>
@@ -191,7 +189,10 @@ export default function App() {
                                 </li>
                               ) : (
                                 coluna.map((horario, idx) => (
-                                  <li key={idx} className="li-horario list-group-item">
+                                  <li
+                                    key={idx}
+                                    className="li-horario list-group-item"
+                                  >
                                     {horario}
                                   </li>
                                 ))
@@ -222,7 +223,10 @@ export default function App() {
                                 </li>
                               ) : (
                                 coluna.map((horario, idx) => (
-                                  <li key={idx} className="li-horario list-group-item">
+                                  <li
+                                    key={idx}
+                                    className="li-horario list-group-item"
+                                  >
                                     {horario}
                                   </li>
                                 ))

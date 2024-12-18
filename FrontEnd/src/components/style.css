@@ -8,6 +8,16 @@
 .li-linha{
     padding: 20px
 }
+.li-horario{
+    background-color: #EAEAEA;
+}
+.card{
+    border-radius: 25px;
+}
+.card-horario{
+   background-color:#4A4A4A;
+   border-radius: 25px;
+}
 .li-linha:hover{
 background-color: #cacaca;
 cursor: pointer;
@@ -19,7 +29,7 @@ cursor: pointer;
 }
 @media (max-width:600px) {
     input{
-        width: 300px !important;
+        width: 250px !important;
     }
     .grid-horario{
         display:grid;
